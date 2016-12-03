@@ -73,4 +73,10 @@ class Repository
     {
         return call_user_func_array([$this->model, $method], $args);
     }
+
+
+    public function __get($name)
+    {
+        return $this->model->{$name};
+    }
 }

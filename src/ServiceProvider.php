@@ -17,6 +17,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function boot()
     {
+        $this->loadViewsFrom(__DIR__.'/Resources/views', 'ixl-laravel-admin');
     }
 
     /**

@@ -45,8 +45,9 @@ class AdminController
     public function index()
     {
         $paginator = $this->models->paginate();
+        $columns = $this->models->fillable;
 
-        return $this->view->make("ixl-laravel-admin::show", compact('paginator'));
+        return $this->view->make("ixl-laravel-admin::index", compact('paginator', 'columns'));
     }
 
     /**
@@ -62,26 +63,28 @@ class AdminController
 
     public function create()
     {
-
+        return $this->view->make("ixl-laravel-admin::create");
     }
 
     public function store(Request $request)
     {
-
+        $this->manager->create($request->all());
     }
 
     public function edit($id)
     {
+        $model = $this->models->find($id);
 
+        return $this->view->make("ixl-laravel-admin::edit", compact('model'));
     }
 
     public function update($id, Request $request)
     {
-
+        $this->manager->update($id, $request->all());
     }
 
     public function destroy($id)
     {
-
+        $this->manager->delete($id);
     }
 }
