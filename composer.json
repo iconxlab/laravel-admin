@@ -1,0 +1,20 @@
+{
+    "name": "iconxlab/laravel-admin",
+    "description": "Admin panel for Laravel 5.3 or higher",
+    "authors": [
+        {
+            "name": "chernoff",
+            "email": "4ernovm@gmail.com"
+        },
+        {
+            "name": "vadiktok",
+            "email": "vadiktok@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Iconxlab\\LaravelAdmin\\": "src/"
+        }
+    }
+}
