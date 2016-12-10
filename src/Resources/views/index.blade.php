@@ -9,7 +9,7 @@
                     @foreach($columns as $column)
                         <th>
                             <a href="#sort">
-                                {!! ucfirst($column) !!}
+                                {!! title_case(str_replace("_", " ", snake_case($column))) !!}
                             </a>
                         </th>
                     @endforeach
@@ -28,7 +28,6 @@
                                 <a href="#edit" class="btn btn-primary">Edit</a>
                                 <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal{{ $model->id }}">Delete</button>
                             </div>
-
 
                             <!-- Modal -->
                             <div class="modal fade" id="deleteModal{{ $model->id }}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
