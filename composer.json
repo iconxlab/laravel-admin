@@ -11,7 +11,9 @@
             "email": "vadiktok@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "laravel/framework": "^5.3"
+    },
     "autoload": {
         "psr-4": {
             "Iconxlab\\LaravelAdmin\\": "src/"
